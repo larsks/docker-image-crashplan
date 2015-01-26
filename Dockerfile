@@ -27,10 +27,11 @@ RUN ln -s /crashplan/conf /var/lib/crashplan
 VOLUME /srv/crashplan
 
 # application configuration and state go here
-VOLUME /crashplan/log
-
-# logs get written here
 VOLUME /crashplan/conf
+
+# cache/logs/etc
+VOLUME /crashplan/log
+VOLUME /crashplan/cache
 
 COPY my.service.xml /crashplan/conf.orig/my.service.xml
 COPY start-crashplan.sh /crashplan/bin/start-crashplan.sh
