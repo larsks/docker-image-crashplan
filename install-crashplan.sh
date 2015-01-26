@@ -146,6 +146,8 @@ fi
 LOGDIR=${TARGETDIR}/log
 chmod 777 $LOGDIR
 
+cp scripts/run.conf ${TARGETDIR}/bin
+
 mv ${TARGETDIR}/conf ${TARGETDIR}/conf.orig
 mkdir ${TARGETDIR}/conf
 
