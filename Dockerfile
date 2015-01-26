@@ -18,6 +18,9 @@ RUN cd /tmp; \
 # install crashplan
 COPY install-crashplan.sh /tmp/CrashPlan-install/install-crashplan.sh
 RUN cd /tmp/CrashPlan-install; ./install-crashplan.sh; cd /tmp; rm -rf CrashPlan-install
+
+# when you authenticate to crashplan it creates /var/lib/crashplan/.identity.  
+# we want this to live on a volume with our other configuration files.
 RUN ln -s /crashplan/conf /var/lib/crashplan; \
 	ln -s /usr/local/crashplan /crashplan
 
