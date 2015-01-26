@@ -8,7 +8,7 @@
   </serviceLog>
   <serviceErrorInterval>3600000</serviceErrorInterval>
   <historyLog>
-    <fileHandler append="true" count="10" level="ALL" limit="512000" pattern="/usr/local/crashplan/log/history.log"/>
+    <fileHandler append="true" count="10" level="ALL" limit="512000" pattern="log/history.log"/>
   </historyLog>
   <userIdleDelay>900000</userIdleDelay>
   <orgType>CONSUMER</orgType>
@@ -174,8 +174,8 @@
           </retentionPolicy>
         </backupSet>
       </backupSets>
-      <cachePath>/usr/local/crashplan/cache</cachePath>
-      <manifestPath>/srv/backups/</manifestPath>
+      <cachePath>/crashplan/cache</cachePath>
+      <manifestPath>/srv/crashplan/</manifestPath>
       <softDeleteOfFiles>false</softDeleteOfFiles>
       <smallBlockSize>4096</smallBlockSize>
       <blockSize>32768</blockSize>

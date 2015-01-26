@@ -33,7 +33,7 @@ ARCHIVE=`ls ./*_*.cpi`
 
 TARGETDIR=/crashplan
 BINSDIR=/usr/local/bin
-MANIFESTDIR=/srv/backups
+MANIFESTDIR=/srv/crashplan
 
 # INSTALL TIME ===============================================
 

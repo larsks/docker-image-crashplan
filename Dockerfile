@@ -21,11 +21,15 @@ RUN cd /tmp/CrashPlan-install; ./install-crashplan.sh; cd /tmp; rm -rf CrashPlan
 
 # when you authenticate to crashplan it creates /var/lib/crashplan/.identity.  
 # we want this to live on a volume with our other configuration files.
-RUN ln -s /crashplan/conf /var/lib/crashplan; \
-	ln -s /usr/local/crashplan /crashplan
+RUN ln -s /crashplan/conf /var/lib/crashplan
 
-VOLUME /srv/backups
+# backups go here
+VOLUME /srv/crashplan
+
+# application configuration and state go here
 VOLUME /crashplan/log
+
+# logs get written here
 VOLUME /crashplan/conf
 
 COPY my.service.xml /crashplan/conf.orig/my.service.xml
