@@ -12,7 +12,7 @@ RUN apt-get update && \
 # fetch crashplan package
 RUN cd /tmp; \
 	wget --quiet -O crashplan.tgz \
-	http://download1.us.code42.com/installs/linux/install/CrashPlan/CrashPlan_3.7.0_Linux.tgz; \
+	http://download1.us.code42.com/installs/linux/install/CrashPlan/CrashPlan_4.3.0_Linux.tgz; \
 	tar -x -f crashplan.tgz
 
 # install crashplan
