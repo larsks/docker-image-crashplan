@@ -23,11 +23,11 @@ RUN cd /tmp/CrashPlan-install; ./install-crashplan.sh; cd /tmp; rm -rf CrashPlan
 # we want this to live on a volume with our other configuration files.
 RUN ln -s /crashplan/conf /var/lib/crashplan
 
-# backups go here
-VOLUME /srv/crashplan
-
 # application configuration and state go here
 VOLUME /crashplan/conf
+
+# backups go here
+VOLUME /crashplan/archives
 
 # cache/logs/etc
 VOLUME /crashplan/log

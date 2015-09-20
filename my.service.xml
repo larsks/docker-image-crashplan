@@ -175,7 +175,7 @@
         </backupSet>
       </backupSets>
       <cachePath>/crashplan/cache</cachePath>
-      <manifestPath>/srv/crashplan/</manifestPath>
+      <manifestPath>/crashplan/archives</manifestPath>
       <softDeleteOfFiles>false</softDeleteOfFiles>
       <smallBlockSize>4096</smallBlockSize>
       <blockSize>32768</blockSize>
